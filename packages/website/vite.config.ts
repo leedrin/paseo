@@ -32,7 +32,7 @@ const sitemapPages = [
 export default defineConfig((): UserConfig => {
   return {
     server: {
-      // Bind all interfaces in dev so localhost works across IPv4/IPv6 stacks.
+      // Bind all interfaces in dev to avoid localhost resolution mismatches on some stacks.
       host: true,
       port: 8082,
       fs: {
