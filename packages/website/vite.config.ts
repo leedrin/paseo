@@ -32,6 +32,8 @@ const sitemapPages = [
 export default defineConfig((): UserConfig => {
   return {
     server: {
+      // Bind all interfaces in dev so localhost works across IPv4/IPv6 stacks.
+      host: true,
       port: 8082,
       fs: {
         allow: [repoRoot],
